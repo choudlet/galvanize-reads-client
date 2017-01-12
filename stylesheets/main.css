@@ -46,7 +46,7 @@ footer {
 }
 
 .page-footer {
-  position:static;
+  position:absolute;
   bottom: 0;
 }
 
