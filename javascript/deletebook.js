@@ -16,9 +16,10 @@ $(() => {
         })
 
         $('.book-delete').click((event)=>{
-          $.get(`http://localhost:3000/delete/confirm?id=${id}`)
+          $.get(`http://localhost:3000/books/delete/confirm?id=${id}`)
           .done(response=>{
-
+            window.location = '/books.html';
+            console.log('Yes')
           })
         })
 })
