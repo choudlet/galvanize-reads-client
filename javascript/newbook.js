@@ -1,7 +1,7 @@
 $(() => {
 
     $('select').material_select();
-    $.get('https://dashboard.heroku.com/apps/galvanize-reads-cdh/books/new')
+    $.get('https://galvanize-reads-cdh.herokuapp.com/books/new')
     .done((authors)=>{
       authors.forEach(author=>{
         $('#author_list').append(`<option value="${author.id}">${author.first_name} ${author.last_name}</option>`)
@@ -18,7 +18,7 @@ $(() => {
         author_id: $('#author_list').val()
       };
       console.log(data)
-      $.post('https://dashboard.heroku.com/apps/galvanize-reads-cdh/books/new', data,(response)=>{
+      $.post('https://galvanize-reads-cdh.herokuapp.com/books/new', data,(response)=>{
         Materialize.toast(response.status, 4000)
         if(response.success == true) {
           $('.book-form').trigger('reset');

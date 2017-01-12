@@ -1,6 +1,6 @@
 $(() => {
     let id = window.location.search.split('=')[1];
-    $.get(`https://dashboard.heroku.com/apps/galvanize-reads-cdh/books/delete?id=${id}`)
+    $.get(`https://galvanize-reads-cdh.herokuapp.com/books/delete?id=${id}`)
         .done((result) => {
             let book = result[0];
             console.log(result);
@@ -16,7 +16,7 @@ $(() => {
         })
 
         $('.book-delete').click((event)=>{
-          $.get(`https://dashboard.heroku.com/apps/galvanize-reads-cdh/books/delete/confirm?id=${id}`)
+          $.get(`https://galvanize-reads-cdh.herokuapp.com/books/delete/confirm?id=${id}`)
           .done(response=>{
             window.location = '/books.html';
             console.log('Yes')
