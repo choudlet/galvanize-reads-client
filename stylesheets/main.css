@@ -176,3 +176,21 @@ div .content-container {
   .input-field .prefix.active {
     color: #000;
   }
+
+.delete-title {
+  font-size: 3em;
+}
+
+.delete-author {
+  font-size: 1.5em;
+}
+
+.delete-genre {
+  font-style: italic;
+}
+
+.total-info {
+  display:none;
+  background-color:#ffe0b2;
+  padding: .5em 2em;
+}
