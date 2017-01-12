@@ -1,5 +1,5 @@
 $(()=>{
-  $.get('http://localhost:3000/books')
+  $.get('https://dashboard.heroku.com/apps/galvanize-reads-cdh/books')
   .done((books)=>{
   let source = $('#book-template').html();
   let template = Handlebars.compile(source);
