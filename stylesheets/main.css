@@ -46,7 +46,7 @@ footer {
 }
 
 .page-footer {
-  position:absolute;
+  position:static;
   bottom: 0;
 }
 
@@ -121,6 +121,14 @@ div .content-container {
   margin:0;
 }
 
+.top-buttons {
+  margin-top: 2em;
+}
+
+.btn {
+  color: #212121;
+}
+
 .edit-container, .delete-container {
   display:flex;
   flex-direction: column;
@@ -139,3 +147,32 @@ div .content-container {
 
 #edit, #delete {
   margin:0; }
+
+/* form styling */
+/* label color */
+  .input-field label {
+    color: #212121;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: #212121;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #ef6c00;
+    box-shadow: 0 1px 0 0 #ef6c00;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid #ef6c00;
+    box-shadow: 0 1px 0 0 #ef6c00;
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: #000;
+  }

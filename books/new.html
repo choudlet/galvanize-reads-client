@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link type='text/css' rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css' />
+    <link type='text/css' rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Kelly+Slab|Play" rel="stylesheet">
+    <link type='text/css' rel='stylesheet' href='../stylesheets/main.css' />
+</head>
+
+<body>
+    <header>
+        <nav class='orange darken-2'>
+            <div='nav-wrapper valign-wrapper'>
+                <a href='#' class='valign brand-logo'><i class="fa fa-2x fa-book" aria-hidden="true"></i><span class='product-name'>Galvanize Reads</span></a>
+                </div>
+        </nav>
+    </header>
+    <main>
+        <div class='container'>
+            <h4>Add New Book</h4>
+            <div class='row'>
+                <div class='col s6'>
+                    <form class='book-form'>
+                        <label for='title'>Title</label>
+                        <input type='text' name='title' class='title' validate required/>
+                        <label for='genre'>Genre</label>
+                        <input type='text' name='genre' class='genre' validate required />
+                        <label for='cover_url'>Cover Image Url</label>
+                        <input type='text' name='cover_url' class='cover_url' validate required />
+                        <label for="description">Description</label>
+                        <textarea id="description" name='description' class="materialize-textarea description"></textarea>
+                        <label for='author_id'>Select Authors</label>
+                        <select name='author_id' id='author_list' required multiple>
+                            </select>
+                        <button class='btn orange book-submit accent-1' type='submit'>Add Book</button>
+                    </form>
+                </div>
+                <div class='col s6'>
+                    <div class='row'>
+                    </div>
+                    <div class='col s6'>
+                        <a href='/books.html'><button class='btn orange accent-1'>View All Books</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class='page-footer orange darken-2'>
+        <div class='container'>
+            <small>&copy; Chris Houdlette 2017</small>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src='../javascript/newbook.js'></script>
+</body>
+
+</html>
