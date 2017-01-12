@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link type='text/css' rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css' />
+    <link type='text/css' rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Kelly+Slab|Play" rel="stylesheet">
+    <link type='text/css' rel='stylesheet' href='./stylesheets/main.css' />
+</head>
+
+<body>
+    <header>
+        <nav class='orange darken-2'>
+            <div='nav-wrapper valign-wrapper'>
+                <a href='#' class='valign brand-logo'><i class="fa fa-2x fa-book" aria-hidden="true"></i><span class='product-name'>Galvanize Reads</span></a>
+                </div>
+        </nav>
+    </header>
+    <main>
+        <div class='container'>
+            <section class='books'>
+            </section>
+        </div>
+    </main>
+    <footer class='page-footer orange darken-2'>
+        <div class='container'>
+            <small>&copy; Chris Houdlette 2017</small>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js'></script>
+    <script src="./javascript/books.js"></script>
+    <script id="book-template" type="text/x-handlebars-template">
+        {{#each books}}
+        <div class='row'>
+            <div class='col s3 image-container'>
+                <img class='book-image' src='{{this.cover_url}}' />
+            </div>
+            <div class='col s9 content-container'>
+                <div class='row title-row'>
+                    <div class='col s10 book-info'>
+                        <p class='book-title'>{{this.title}}</p>
+                    </div>
+                    <div class='col s2 button-container'>
+                        <div class='edit-container'>
+
+                            <a class='edit-link' href=''><i class="fa fa-2x fa-pencil-square-o" aria-hidden="true"></i></a>
+                        </div>
+                        <div class='delete-container'>
+                            <a class='delete-link' href=''><i class="fa fa-2x fa-trash-o" aria-hidden="true"></i></i></a>
+                        </div>
+                    </div>
+                  </div>
+                    <div class='row book-again'>
+                        <div class='col s8'>
+
+                            <div class='authors'>
+
+                                {{#each authors}}
+                                <p class='book-author'>{{this.first_name}} {{this.last_name}}</p>
+
+                                {{/each}}
+                            </div>
+                            <p class='genre'><i>{{this.genre}}</i></p>
+                        </div>
+
+                    </div>
+                    <div='row paragraph-text'>
+                    <p class='description'>{{this.description}}</p>
+                    </div>
+                </div>
+        </div>
+        {{/each}}
+    </script>
+</body>
+
+</html>

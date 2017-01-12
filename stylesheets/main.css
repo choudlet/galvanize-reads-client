@@ -1,4 +1,20 @@
+/* General Styling */
 
+html {
+  min-height: 100vh;
+  background-color: #fff3e0;
+}
+
+body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   font-family: 'Play', sans-serif;
+   color: #212121;
+ }
+
+
+/* Nav Styling */
 
 nav .brand-logo {
   color: #F8F8FF;
@@ -10,4 +26,116 @@ nav .brand-logo .product-name {
 
  }
 
-/*# sourceMappingURL=main.css.map */
+/* Card Styling */
+
+.menu-container {
+  margin-top: 3em;
+}
+
+.card .card-title {
+  font-family: "Kelly Slab", cursive;
+}
+
+.card-image img {
+  weight:20em;
+  height: 20em;
+}
+
+footer {
+  width: 100vw;
+}
+
+.page-footer {
+  position:static;
+  bottom: 0;
+}
+
+small {
+  color: #F8F8FF;
+  font-size: 1.2em;
+  padding-bottom: .2em;
+}
+
+/* Book Image Styling */
+
+.books{
+  margin-top: 2em;
+}
+
+.book-image {
+  height:14em;
+}
+
+.book-title {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+.image-container {
+  background-color: #ffe0b2;
+  display:flex;
+  justify-content: center;
+}
+
+.content-container {
+  background-color: #ffe0b2;
+  height:14em;
+}
+
+div .title-row {
+  margin:0;
+}
+
+div .book-again {
+  margin:0;
+}
+
+.authors {
+  display:flex;
+}
+
+.row .book-info {
+  padding:0;
+}
+
+
+.book-author {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: .4em;
+  font-size: 1.2em;
+}
+
+.genre {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.button-container {
+  display:flex;
+  flex-direction: row;
+  margin-top: .1em;
+}
+
+div .content-container {
+  margin:0;
+}
+
+.edit-container, .delete-container {
+  display:flex;
+  flex-direction: column;
+  margin-left: .2em;
+  margin-right: .2em;
+  margin-top: .2em;
+}
+
+.edit-link, .delete-link {
+  color:#e65100
+}
+
+.description {
+  font-size: .75em;
+}
+
+#edit, #delete {
+  margin:0; }
