@@ -189,6 +189,10 @@ div .content-container {
   font-style: italic;
 }
 
+.delete-image {
+  max-width: 25em;
+}
+
 .total-info {
   display:none;
   background-color:#ffe0b2;
